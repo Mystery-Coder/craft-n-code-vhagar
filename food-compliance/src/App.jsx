@@ -31,7 +31,8 @@ import {
 const BACKEND_URL = "http://192.168.1.9:5000";
 const BACKEND_URL_FLASK = "http://192.168.1.9:3157";
 const BATCH_SIZE = 5;
-
+let Score;
+let brandName;
 // Styled components
 const VisuallyHiddenInput = styled("input")({
     clip: "rect(0 0 0 0)",
@@ -184,7 +185,7 @@ const ProductAnalyzer = () => {
 
                 allPredictions.push(...predictionsArr.filter(Boolean));
             }
-
+            Score = parseInt((freshCount / selectedFiles.length) * 100); //Score for Blockcahin
             setPredictions(allPredictions);
             setFreshCount(freshImageCount);
             setRottenCount(rottenImageCount);
@@ -202,7 +203,7 @@ const ProductAnalyzer = () => {
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setBatchInfo((prev) => ({
+        setInfo((prev) => ({
             ...prev,
             [name]: value,
         }));
@@ -227,7 +228,7 @@ const ProductAnalyzer = () => {
                 ).toFixed(2),
             },
         };
-
+        brandName = batchInfo["brand"];
         fetch(BACKEND_URL_FLASK + "/predict", {
             method: "POST",
             headers: {
@@ -237,7 +238,10 @@ const ProductAnalyzer = () => {
         })
             .then((response) => response.json()) // Parse the JSON response
             .then((data) => {
-                console.log("Success:", data); // Handle the data from the response
+                console.log("Success:", data);
+                let compliance = data[0] === "compliant" ? 1 : 0;
+
+                Score = Score * compliance; // Handle the data from the response
             })
             .catch((error) => {
                 console.error("Error:", error); // Handle any errors

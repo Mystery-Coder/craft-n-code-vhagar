@@ -36,10 +36,10 @@ A blockchain-integrated solution for automated food quality assessment using ima
 ## 🛠️ Tech Stack
 
 -   **Frontend**: React.js
--   **Image Analysis**: TensorFlow/PyTorch (specify your choice)
--   **Blockchain**: Ethereum/Hyperledger (specify your choice)
--   **Data Visualization**: Chart.js/D3.js
--   **Backend**: Node.js/Python (specify your choice)
+-   **Image Analysis**: TensorFlow
+-   **Blockchain**: Ethereum Sepolia Testnet
+-   **Data Visualization**: Chart.js
+-   **Backend**: Node.js
 
 ## 📋 Prerequisites
 
@@ -124,38 +124,19 @@ python app.py  # or your specific start command
 -   User authentication required for system access
 -   Regular security audits performed
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
 ## 👥 Team
 
--   [Developer Name] - _Initial work_ - [GitHub Profile]
--   [Developer Name] - _Initial work_ - [GitHub Profile]
-
-## 📞 Support
-
-For support, email [your-email@example.com] or create an issue in the repository.
+-   (Srikar Rao H M)[https://github.com/Mystery-Coder]
+-   (Rahul R Raikar)[https://github.com/RahulRR-10]
+-   (Samyak Rao)[https://github.com/Batista31]
+-   (Rajat G A)[https://github.com/rajat-gondkar]
 
 ## 🙏 Acknowledgments
 
--   List any third-party services used
--   Credits to external libraries and frameworks
--   Mention any inspiration sources
+-   Utilized Azure Custom Vision
+-   React.js, Flask
 
 ## 📊 Project Status
 
 Current Version: 1.0.0
 Status: In Development
-
----
-
-**Note:** Replace placeholder text in brackets with your specific project details before publishing.
