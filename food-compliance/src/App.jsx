@@ -79,6 +79,9 @@ const ProductAnalyzer = () => {
         regulatory_notes: "",
     });
 
+    const [loaded, setLoaded] = useState(false);
+    const [compliance, setCompliance] = useState("");
+
     useEffect(() => {
         checkServerStatus();
     }, []);
@@ -203,7 +206,7 @@ const ProductAnalyzer = () => {
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setInfo((prev) => ({
+        setBatchInfo((prev) => ({
             ...prev,
             [name]: value,
         }));
@@ -239,9 +242,12 @@ const ProductAnalyzer = () => {
             .then((response) => response.json()) // Parse the JSON response
             .then((data) => {
                 console.log("Success:", data);
-                let compliance = data[0] === "compliant" ? 1 : 0;
+                setCompliance(data["predictions"][0]);
 
-                Score = Score * compliance; // Handle the data from the response
+                let _compliance = data[0] === "compliant" ? 1 : 0;
+
+                Score = Score * _compliance; // Handle the data from the response
+                setLoaded(true);
             })
             .catch((error) => {
                 console.error("Error:", error); // Handle any errors
@@ -464,10 +470,14 @@ const ProductAnalyzer = () => {
                                             fullWidth
                                             size="large"
                                         >
-                                            Save Product
+                                            Save Product Analysis To BlockChain
                                         </Button>
                                     </Grid>
                                 </Grid>
+                                <Typography>
+                                    {loaded &&
+                                        `The product is ${compliance} according to our NLP model and should be added to blockchain`}
+                                </Typography>
                             </Box>
                         </CardContent>
                     </Card>

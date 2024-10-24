@@ -1,6 +1,6 @@
 # craft-n-code-vhagar
 
-# AI-Powered Food Quality Analysis System
+# AI-Powered Food Quality Analysis System Using Blockchain
 
 A blockchain-integrated solution for automated food quality assessment using image analysis and industry compliance checking. The system processes batches of food products, analyzing their visual quality and compliance with industry standards, storing results securely on the blockchain.
 
