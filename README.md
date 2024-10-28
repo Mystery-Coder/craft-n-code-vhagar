@@ -126,10 +126,10 @@ python app.py  # or your specific start command
 
 ## 👥 Team
 
--   (Srikar Rao H M)[https://github.com/Mystery-Coder]
--   (Rahul R Raikar)[https://github.com/RahulRR-10]
--   (Samyak Rao)[https://github.com/Batista31]
--   (Rajat G A)[https://github.com/rajat-gondkar]
+-   [Srikar Rao H M](https://github.com/Mystery-Coder)
+-   [Rahul R Raikar](https://github.com/RahulRR-10)
+-   [Samyak Rao](https://github.com/Batista31)
+-   [Rajat G A](https://github.com/rajat-gondkar)
 
 ## 🙏 Acknowledgments
 
